@@ -25,7 +25,7 @@ class Webservice {
                 
                 let articleDictionaries = dictionary["articles"] as! [JSONDictionary]
                 
-                articles = articleDictionaries.flatMap { dictionary in
+                articles = articleDictionaries.compactMap { dictionary in
                     return Article(dictionary :dictionary)
                 }
             }
